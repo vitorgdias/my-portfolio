@@ -10,7 +10,7 @@ let theme = createTheme({
         },
     },
     typography: {
-        fontFamily: "Helvetiva Neue"
+        fontFamily: ["Segoe UI"].join(','),
     }
 })
 
