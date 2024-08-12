@@ -17,7 +17,7 @@ const Hero = () => {
   return (
     <>
       <StyledHero>
-        <Container>
+        <Container maxWidth="lg">
           <Grid container spacing={2}>
             <Grid item xs={12} md={4}>
               <StyledImage src={Avatar} />
@@ -29,14 +29,32 @@ const Hero = () => {
               <Typography color="primary" variant="h2" textAlign="center">
                 I'm QA Engineer
               </Typography>
-              <Button>
-                <DownloadIcon />
-                Download CV
-              </Button>
-              <Button>
-                <MailOutlineIcon />
-                Contact Me
-              </Button>
+              <Grid container display="flex" justifyContent="center">
+                <Grid
+                  item
+                  xs={12}
+                  md={4}
+                  display="flex"
+                  justifyContent="center"
+                >
+                  <Button>
+                    <DownloadIcon />
+                    Download CV
+                  </Button>
+                </Grid>
+                <Grid
+                  item
+                  xs={12}
+                  md={4}
+                  display="flex"
+                  justifyContent="center"
+                >
+                  <Button>
+                    <MailOutlineIcon />
+                    Contact Me
+                  </Button>
+                </Grid>
+              </Grid>
             </Grid>
           </Grid>
         </Container>
