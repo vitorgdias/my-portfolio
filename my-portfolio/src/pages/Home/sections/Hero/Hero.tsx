@@ -1,8 +1,9 @@
-import { Container, Grid, styled, Typography } from "@mui/material";
+import { Box, Container, Grid, styled, Typography } from "@mui/material";
 import Avatar from "../../../../assets/images/Avatar.jpg";
 import DownloadIcon from "@mui/icons-material/Download";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import StyledButton from "../../../../components/StyledButton/StyledButton";
+import { AnimatedBackground } from "../../../../components/AnimatedBackground/AnimatedBackground";
 
 const Hero = () => {
   const StyledHero = styled("div")(({ theme }) => ({
@@ -24,7 +25,14 @@ const Hero = () => {
         <Container maxWidth="lg">
           <Grid container spacing={2}>
             <Grid item xs={12} md={5}>
-              <StyledImage src={Avatar} />
+              <Box position="relative">
+                <Box position="absolute" width="100%" top="-100" right="0">
+                  <AnimatedBackground />
+                </Box>
+                <Box position="relative" textAlign="center">
+                  <StyledImage src={Avatar} />
+                </Box>
+              </Box>
             </Grid>
             <Grid item xs={12} md={7}>
               <Typography
